@@ -9,6 +9,7 @@
 body, h1, h2, h3, h4, p {
     margin: 0; 
     font: inherit;
+    line-height: 140%;
 }
 
 body {
@@ -45,12 +46,11 @@ body {
 }
 
 .hero {
-    padding: 80px 8px;
+    padding: 80px 8px 50px 8px;
 }
 
 .heading1 {
     font-size: 36px;
-    line-height: 140%;
     margin-bottom: 40px;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .gallery__card {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     height: 100%;
 }
 
@@ -83,6 +83,9 @@ body {
     width: 100%;
 }
 
+.gallery__image--grayscale {
+    filter: grayscale(100%);
+}
 
 .social-shares {
     display: grid; 
@@ -93,7 +96,6 @@ body {
     padding-right: 8px;
 
 }
-  
 
 .footer {
     background-color: #363434;
@@ -101,21 +103,21 @@ body {
     padding: 100px 8px;
 }
 
-.footer__footer {
+.footer__info {
     display: grid;
     grid-template-columns: repeat(auto-fit);
+    grid-template-rows: auto;
     justify-content: center;
     gap: 10px;
     padding-right: 15px;
     padding-left: 15px;
+    text-align: center;
 }
 
 .footer__image {
     max-width: 170px;
-    grid-column: 2;
-    grid-column: 2/3;
-    justify-self: center;
     padding: 20px;
+    justify-self: center;
 }
 
 .footer_heading {
@@ -124,14 +126,33 @@ body {
     text-align: center;
     color: #FCFCFC;
     padding-bottom: 30px;
-    grid-column: 2/3;
-
 }
 
 .footer__paragraph {
     font-size: 17px;
     line-height: 160%;
-    grid-column: 2/3;
-
 }
 
+@media only screen and (max-width: 767px) {
+   .heading1 {
+       font-size: 22px;
+       margin-bottom: 20px;
+   }
+
+   .heading4 {
+       font-size: 18px;
+       line-height: 200%;
+   }
+
+   .paragraph {
+       font-size: 16px;
+   }
+
+   .hero {
+       padding: 10px 8px; 
+   }
+
+   .gallery__card {
+       padding-bottom: 30px;
+   }
+  }
